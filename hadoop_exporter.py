@@ -1,17 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import yaml
-import re
 import time
 from sys import exit
 from prometheus_client import start_http_server
 from prometheus_client.core import GaugeMetricFamily, HistogramMetricFamily, REGISTRY
 
-from consul import Consul
 
 from cmd import utils
-from cmd.utils import get_host_ip
 from cmd.utils import get_module_logger
 from cmd.hdfs_namenode import NameNodeMetricCollector
 from cmd.hdfs_datanode import DataNodeMetricCollector
